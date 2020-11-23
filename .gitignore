@@ -57,3 +57,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# Windows build files
+Deploy.binlog
+msbuild.binlog

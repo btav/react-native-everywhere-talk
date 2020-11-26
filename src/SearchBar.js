@@ -1,27 +1,27 @@
 import React from 'react';
-import { View, Text, TextInput, StyleSheet } from 'react-native';
+import {View, Text, TextInput, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     height: 200,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bar: {
     backgroundColor: '#fff',
     height: 60,
     width: 375,
     marginTop: 20,
-    padding: 10
+    padding: 10,
   },
   text: {
     fontSize: 18,
-    color: '#fff'
-  }
+    color: '#fff',
+  },
 });
 
-const SearchBar = ({ onChangeText }) => (
+const SearchBar = ({onChangeText}) => (
   <View style={styles.container}>
     <Text style={styles.text}>Search for anything on GIPHY</Text>
     <TextInput

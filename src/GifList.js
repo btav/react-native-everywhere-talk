@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { StyleSheet, ScrollView, Image } from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, ScrollView, Image} from 'react-native';
 
 const styles = StyleSheet.create({
   desktop: {
     flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   mobile: {
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 });
 
-const GifList = ({ gifs }) => {
+const GifList = ({gifs}) => {
   const [isWide, setLayout] = useState(false);
 
   if (!gifs || gifs.length === 0) {
@@ -22,16 +22,15 @@ const GifList = ({ gifs }) => {
   return (
     <ScrollView
       contentContainerStyle={isWide ? styles.desktop : styles.mobile}
-      onLayout={({ nativeEvent }) => setLayout(nativeEvent.layout.width > 800)}
-    >
-      {gifs.map(gif => (
+      onLayout={({nativeEvent}) => setLayout(nativeEvent.layout.width > 800)}>
+      {gifs.map((gif) => (
         <Image
           key={gif.id}
           style={{
             width: Number(gif.images.downsized.width),
-            height: Number(gif.images.downsized.height)
+            height: Number(gif.images.downsized.height),
           }}
-          source={{ uri: gif.images.downsized.url.toString() }}
+          source={{uri: gif.images.downsized.url.toString()}}
         />
       ))}
     </ScrollView>

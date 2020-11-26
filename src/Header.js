@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import {SafeAreaView, Text, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   title: {
@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 85,
-    backgroundColor: "#1C2837",
-  }
+    backgroundColor: '#1C2837',
+  },
 });
 
 const Header = () => (
